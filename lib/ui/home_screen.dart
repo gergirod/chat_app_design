@@ -7,7 +7,6 @@ import 'package:messenger_app/ui/widgets/home_chats_widget.dart';
 class HomeScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _HomeScreenState();
-
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -23,10 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         title: Text(
           'Chats',
-          style: (TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 28.0
-          )),
+          style: (TextStyle(fontWeight: FontWeight.bold, fontSize: 28.0)),
         ),
         elevation: 0.0,
         actions: <Widget>[
@@ -43,17 +39,12 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).accentColor,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30.0),
-                  topRight: Radius.circular(30.0)
-                )
-              ),
+                  color: Theme.of(context).accentColor,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30.0),
+                      topRight: Radius.circular(30.0))),
               child: Column(
-                children: <Widget>[
-                  FavoriteContacts(),
-                  HomeChat()
-                ],
+                children: <Widget>[FavoriteContacts(), HomeChat()],
               ),
             ),
           )
@@ -61,5 +52,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
 }

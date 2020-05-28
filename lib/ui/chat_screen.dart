@@ -1,24 +1,19 @@
-
 import 'package:flutter/material.dart';
-import 'package:messenger_app/models/messenger_model.dart';
-import 'package:messenger_app/models/user_model.dart';
+import 'package:messenger_app/domain/models/messenger_model.dart';
+import 'package:messenger_app/domain/models/user_model.dart';
 import 'package:messenger_app/ui/widgets/message_chat_widget.dart';
 
 class ChatScreen extends StatefulWidget {
   List<Message> messages;
   User user;
 
-  ChatScreen({
-    this.messages,
-    this.user
-  });
+  ChatScreen({this.messages, this.user});
 
   @override
   State<StatefulWidget> createState() => _ChatScreenState();
-
 }
 
-_buildMessageComposer(){
+_buildMessageComposer() {
   return Container(
     padding: EdgeInsets.symmetric(horizontal: 8.0),
     height: 70.0,
@@ -33,12 +28,9 @@ _buildMessageComposer(){
         ),
         Expanded(
           child: TextField(
-            onChanged: (values) {
-            },
+            onChanged: (values) {},
             textCapitalization: TextCapitalization.sentences,
-            decoration: InputDecoration.collapsed(
-              hintText: 'send message...'
-            ),
+            decoration: InputDecoration.collapsed(hintText: 'send message...'),
           ),
         ),
         IconButton(
@@ -47,11 +39,11 @@ _buildMessageComposer(){
           color: Colors.red,
           onPressed: () {},
         ),
-
       ],
     ),
   );
 }
+
 class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
@@ -62,16 +54,11 @@ class _ChatScreenState extends State<ChatScreen> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           color: Colors.white,
-          onPressed: () =>
-            Navigator.pop(context)
-          ,
+          onPressed: () => Navigator.pop(context),
         ),
         title: Text(
           widget.user.name,
-          style: (TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 24.0
-          )),
+          style: (TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0)),
         ),
         elevation: 0.0,
         actions: <Widget>[
@@ -88,17 +75,15 @@ class _ChatScreenState extends State<ChatScreen> {
           children: <Widget>[
             Expanded(
               child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30.0),
-                      topRight: Radius.circular(30.0),
-                  )
-                ),
-                child: MessageChat(
-                  messages: widget.messages,
-                )
-              ),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30.0),
+                        topRight: Radius.circular(30.0),
+                      )),
+                  child: MessageChat(
+                    messages: widget.messages,
+                  )),
             ),
             _buildMessageComposer()
           ],
@@ -106,5 +91,4 @@ class _ChatScreenState extends State<ChatScreen> {
       ),
     );
   }
-
 }

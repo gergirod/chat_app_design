@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:messenger_app/models/messenger_model.dart';
+import 'package:messenger_app/domain/models/messenger_model.dart';
 
 class MessageChat extends StatefulWidget {
   List<Message> messages;
@@ -12,7 +12,7 @@ class MessageChat extends StatefulWidget {
 
 class _MessageChatState extends State<MessageChat> {
   _buildMessage(Message message, bool isMe) {
-    final Container  msg = Container(
+    final Container msg = Container(
       width: MediaQuery.of(context).size.width * 0.75,
       margin: isMe
           ? EdgeInsets.only(top: 8.0, bottom: 8.0, left: 80.0)
@@ -20,21 +20,21 @@ class _MessageChatState extends State<MessageChat> {
       padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
       decoration: BoxDecoration(
           color: isMe ? Theme.of(context).accentColor : Color(0XFFFFEFEE),
-          borderRadius: isMe ? BorderRadius.only(
-              topLeft: Radius.circular(15.0), bottomLeft: Radius.circular(15.0))
-              :BorderRadius.only(
-              bottomRight: Radius.circular(15.0), topRight: Radius.circular(15.0))
-      ),
+          borderRadius: isMe
+              ? BorderRadius.only(
+                  topLeft: Radius.circular(15.0),
+                  bottomLeft: Radius.circular(15.0))
+              : BorderRadius.only(
+                  bottomRight: Radius.circular(15.0),
+                  topRight: Radius.circular(15.0))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(
-              message.time,
+          Text(message.time,
               style: TextStyle(
                   color: Colors.blueGrey,
                   fontWeight: FontWeight.w600,
-                  fontSize: 16.0
-              )),
+                  fontSize: 16.0)),
           SizedBox(
             height: 10.0,
           ),
@@ -43,8 +43,7 @@ class _MessageChatState extends State<MessageChat> {
             style: TextStyle(
                 color: Colors.blueGrey,
                 fontWeight: FontWeight.w600,
-                fontSize: 16.0
-            ),
+                fontSize: 16.0),
           ),
         ],
       ),
@@ -57,9 +56,9 @@ class _MessageChatState extends State<MessageChat> {
       children: <Widget>[
         msg,
         IconButton(
-          icon: message.isLiked ?
-            Icon(Icons.favorite):
-            Icon(Icons.favorite_border),
+          icon: message.isLiked
+              ? Icon(Icons.favorite)
+              : Icon(Icons.favorite_border),
           iconSize: 30.0,
           color: message.isLiked
               ? Theme.of(context).primaryColor

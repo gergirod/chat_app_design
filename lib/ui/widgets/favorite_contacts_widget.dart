@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:messenger_app/models/messenger_model.dart';
+import 'package:messenger_app/domain/models/messenger_model.dart';
 
 class FavoriteContacts extends StatelessWidget {
   @override
@@ -17,15 +17,13 @@ class FavoriteContacts extends StatelessWidget {
                 Text(
                   "Favorite Contacts",
                   style: TextStyle(
-                    color: Colors.blueGrey,
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.0),
+                      color: Colors.blueGrey,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.0),
                 ),
                 IconButton(
-                  icon: Icon(
-                      Icons.more_horiz
-                  ),
+                  icon: Icon(Icons.more_horiz),
                   onPressed: () {},
                   iconSize: 30.0,
                   color: Colors.grey,
@@ -46,27 +44,25 @@ class FavoriteContacts extends StatelessWidget {
                     children: <Widget>[
                       CircleAvatar(
                         radius: 35.0,
-                        backgroundImage: NetworkImage(favorites[index].imageUrl),
+                        backgroundImage:
+                            NetworkImage(favorites[index].imageUrl),
                       ),
                       SizedBox(height: 6.0),
                       Text(
                         favorites[index].name,
                         style: TextStyle(
-                        color: Colors.blueGrey,
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.w600
-                      ),),
+                            color: Colors.blueGrey,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w600),
+                      ),
                     ],
                   ),
                 );
               },
             ),
-
           )
         ],
       ),
     );
   }
-
-
 }
