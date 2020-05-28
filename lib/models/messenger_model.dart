@@ -20,145 +20,122 @@ class Message {
 
 final User currentUser = User(
   id: 0,
-  name: 'German Girod',
+  name: 'German',
   imageUrl: 'https://avatars1.githubusercontent.com/u/3282448?s=460&v=4'
 );
 
-User gambeta = User(
+User userOne = User(
   id: 1,
-  name: 'Tomas Agrimbau',
+  name: 'Tomas',
   imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*jBS6U9G12aq1EPqCobZ7uA.jpeg'
 );
 
-User josi = User(
+User userTwo = User(
   id: 2,
-  name: 'Jose Teding',
+  name: 'Jose',
   imageUrl: 'https://pbs.twimg.com/profile_images/572513541500833792/h08Ewues_400x400.jpeg'
 );
 
-User hip = User(
+User userThree = User(
   id: 3,
-  name: 'Agustin Zappacosta',
+  name: 'Agustin',
   imageUrl: 'https://fmdataba.com/images/p/51640.png'
 );
 
-User erre = User(
+User userFour = User(
   id: 4,
-  name: 'Santiago Verdino',
+  name: 'Santiago',
   imageUrl: 'https://media-exp1.licdn.com/dms/image/C4E03AQF25xJkhB53XA/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=yeVBrXBJeR7yrxJNwIsiR8RVPN_KEiEp90VzDaP4ta8'
 );
 
-User rulo = User(
+User userFive = User(
   id: 5,
-  name: 'Bruno Verdino',
+  name: 'Bruno',
   imageUrl: 'https://i.ytimg.com/vi/tRrASzxH4cU/hqdefault.jpg'
 );
 
-User jota = User(
+User userSix = User(
   id: 6,
-  name: 'Tomas Ocampo',
+  name: 'Tomas',
   imageUrl: 'https://pbs.twimg.com/profile_images/1192247875805143040/ANC9kHPN_400x400.jpg'
 );
 
-User topo = User(
+User userSeven = User(
   id: 7,
-  name: 'Elliot Sucari',
+  name: 'Elliot',
   imageUrl: 'https://media-exp1.licdn.com/dms/image/C4E03AQFFzJF7yUBUWQ/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=FvF8doGrBNF6Pjt4ZpD8jxT6oWdenf5btALpiOTwuIE'
 );
 
-User bila = User(
+User userEight = User(
   id: 8,
-  name: 'Pablo Renna',
+  name: 'Pablo',
   imageUrl: 'https://elmundialdelnarigon.files.wordpress.com/2010/05/pablito21.jpg'
 );
 
-List<User> favorites = [gambeta, erre, rulo, jota, josi];
+List<User> favorites = [userOne, userTwo, userThree, userFour, userFive,
+  userSix, userSeven, userEight];
 
 List<Message> chats = [
   Message(
-    user: gambeta,
+    user: userTwo,
     time: '5:30 pm',
-    text: 'hey this is don diego calling whats up mate',
+    text: 'hey, whats up mate',
     isLiked: false,
     unread: true
   ),
 
   Message(
-      user: rulo,
+      user: userOne,
       time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
+      text: 'hey, whats up mate',
       isLiked: true,
       unread: false
   ),
 
   Message(
-      user: erre,
+      user: userThree,
       time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
+      text: 'hey, whats up mate',
       isLiked: false,
       unread: false
   ),
 
   Message(
-      user: josi,
+      user: userFour,
       time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
+      text: 'hey, whats up mate',
       isLiked: true,
       unread: true
   ),
 
   Message(
-      user: bila,
+      user: userFive,
       time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
+      text: 'hey, whats up mate',
       isLiked: false,
       unread: true
   ),
 
   Message(
-      user: hip,
+      user: userSix,
       time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
+      text: 'hey, whats up mate',
       isLiked: false,
       unread: false
   ),
 
   Message(
-      user: gambeta,
+      user: userEight,
       time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
+      text: 'hey, whats up mate',
       isLiked: false,
       unread: true
   ),
 
   Message(
-      user: josi,
+      user: userSeven,
       time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
-      isLiked: false,
-      unread: true
-  ),
-
-  Message(
-      user: jota,
-      time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
-      isLiked: true,
-      unread: true
-  ),
-
-  Message(
-      user: erre,
-      time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
-      isLiked: false,
-      unread: true
-  ),
-
-  Message(
-      user: rulo,
-      time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
+      text: 'hey, whats up mate',
       isLiked: false,
       unread: true
   ),
@@ -167,9 +144,9 @@ List<Message> chats = [
 
 List<Message> messages = [
   Message(
-      user: gambeta,
+      user: userOne,
       time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
+      text: 'hey, whats up mate',
       isLiked: false,
       unread: true
   ),
@@ -177,7 +154,7 @@ List<Message> messages = [
   Message(
       user: currentUser,
       time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
+      text: 'hey, whats up mate',
       isLiked: true,
       unread: false
   ),
@@ -185,15 +162,55 @@ List<Message> messages = [
   Message(
       user: currentUser,
       time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
+      text: 'hey, whats up mate',
       isLiked: false,
       unread: false
   ),
 
   Message(
-      user: gambeta,
+      user: userOne,
       time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
+      text: 'hey, whats up mate',
+      isLiked: true,
+      unread: true
+  ),
+
+  Message(
+      user: currentUser,
+      time: '5:30 pm',
+      text: 'hey, whats up mate',
+      isLiked: false,
+      unread: true
+  ),
+
+  Message(
+      user: userOne,
+      time: '5:30 pm',
+      text: 'hey, whats up mate',
+      isLiked: false,
+      unread: false
+  ),
+
+  Message(
+      user: userOne,
+      time: '5:30 pm',
+      text: 'hey, whats up mate',
+      isLiked: false,
+      unread: true
+  ),
+
+  Message(
+      user: currentUser,
+      time: '5:30 pm',
+      text: 'hey, whats up mate',
+      isLiked: false,
+      unread: true
+  ),
+
+  Message(
+      user: userOne,
+      time: '5:30 pm',
+      text: 'hey, whats up mate',
       isLiked: true,
       unread: true
   ),
@@ -207,47 +224,7 @@ List<Message> messages = [
   ),
 
   Message(
-      user: gambeta,
-      time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
-      isLiked: false,
-      unread: false
-  ),
-
-  Message(
-      user: gambeta,
-      time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
-      isLiked: false,
-      unread: true
-  ),
-
-  Message(
-      user: currentUser,
-      time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
-      isLiked: false,
-      unread: true
-  ),
-
-  Message(
-      user: gambeta,
-      time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
-      isLiked: true,
-      unread: true
-  ),
-
-  Message(
-      user: currentUser,
-      time: '5:30 pm',
-      text: 'hey this is don diego calling whats up mate',
-      isLiked: false,
-      unread: true
-  ),
-
-  Message(
-      user: gambeta,
+      user: userOne,
       time: '5:30 pm',
       text: 'hey this is don diego calling whats up mate',
       isLiked: false,
