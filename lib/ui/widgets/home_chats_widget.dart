@@ -33,8 +33,8 @@ class _HomeChatState extends State<HomeChat> {
                             ChatScreen(messages: messages, user: chat.user))),
                 child: Container(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                  margin: EdgeInsets.only(top: 5.0, bottom: 5.0, right: 20.0),
+                      EdgeInsets.symmetric(horizontal: 10.0, vertical: 15.0),
+                  margin: EdgeInsets.only(bottom: 10.0),
                   decoration: BoxDecoration(
                       color: chat.unread ? Color(0xFFFFEFEE) : Colors.white,
                       borderRadius: BorderRadius.only(
